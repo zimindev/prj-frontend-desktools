@@ -1,0 +1,312 @@
+  
+  /*⢀⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢸⣿⣿⣿⣿⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠘⠉⠉⠙⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⣴⣿⣿⣿⠟⣿⣿⣿⣷⠀⠀⠀⠀
+⠀⠀⠀⣰⣿⣿⣿⡏⠀⠸⣿⣿⣿⣇⠀⠀⠀
+⠀⠀⢠⣿⣿⣿⡟⠀⠀⠀⢻⣿⣿⣿⡆⠀⠀
+⠀⢠⣿⣿⣿⡿⠀⠀⠀⠀⠀⢿⣿⣿⣷⣤⡄
+⢀⣾⣿⣿⣿⠁⠀⠀⠀⠀⠀⠈⠿⣿⣿⣿⡇*/
+
+
+  
+  /*!Фон сайту*/
+  .bg-sebn {
+    background-image: url(/img/background/background.jpg);
+    background-size: cover;
+  }
+  
+  /*!Навігація, головне меню*/
+  .nav-link {
+    background: none;
+    box-sizing: border-box;
+    color:  rgb(255, 255, 255);
+    display: block;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    list-style: outside none none;
+    outline: none;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .nav-link:hover {
+    --bs-link-color-rgb: 10, 88, 202;
+    color:  #d0ff00;
+  }
+
+  /*!Навігація, бургер меню, головне меню,*/
+  .navbar-toggler {
+    color:#fff;
+    border: 1px solid #fff;
+    padding: 12px 20px 10px 32px;
+    text-transform:uppercase;
+    font-size: 14px;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow:  none;
+    outline: 0px;
+    text-decoration: none;
+  }
+  
+.navbar-toggler-icon {
+    margin-top: -4px;
+}
+  
+/*! Стилі для сторінки Логів*/
+.log {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}
+.log.warning {
+  background-color: #ffcc00;
+}
+.log.error {
+  background-color: #ff6666;
+}
+.log.info {
+  background-color: #99ccff;
+}
+/*! Стилі для форми пошуку PDF файлів */
+
+.input-search-form {
+  height:36px; 
+  width: 180px; 
+  font-size:14px; 
+  border-radius: 5px; 
+  border: 2px solid #ccc; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+  margin: 10px;
+  
+}
+
+.button-search-form {
+  left:10px; 
+  height:36px; 
+  width: 180px; 
+  font-size:14px; 
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor:pointer; 
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  margin: 10px;
+}
+
+.button-search-form-info {
+  left:10px; 
+  height:36px; 
+  width:225px; 
+  font-size:14px; 
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #ffe69c; 
+  color: #000; 
+  border: none; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  margin: 10px 10px 10px 60px;
+}
+
+/*! Адаптивний стиль для вбудованого фрейму виводу результатів пощуку */
+#pdf-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* Співвідношення 4:3 */
+  position: relative;
+}
+
+#pdf-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*! Стилі для списку на сторінці Пошуку */
+.elastic {
+  padding: 0;
+  list-style: none;
+}
+.elastic li {
+  padding: 5px 0;
+  text-align: center;
+}
+.elastic li:last-child {
+  border-bottom: none; /* Видалення розділювача від останнього пункту */
+}
+.elastic a {
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff; /* Колір посилань */
+}
+.elastic a:hover {
+  color: #88ff00; /* Колір посилань при наведенні */
+}
+
+/*! Стилі для Футера */
+footer {
+  font-size: 12px;
+}
+
+.fixed-left-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+  margin: 5px;
+  width: 250px; /* встановіть ширину за вашим вибором */
+}
+  
+  /*! Медіа-запит для точок переходу навігаційного меню 1770px, 1600px, 1440px, 1244px - зміна розміру шрифту головного меню */
+@media (max-width: 1770px) {
+  .nav-link {
+    font-size: 14px; /** Зменшення розміру шрифту на менших екранах */
+  }
+}
+
+@media (max-width: 1600px) {
+  .nav-link {
+    font-size: 11px; /** Зменшення розміру шрифту на менших екранах */
+  }
+}
+
+@media (max-width: 1440px) {
+  .nav-link {
+    font-size: 10px; /** Зменшення розміру шрифту на менших екранах */
+  }
+}
+
+@media (max-width: 1244px) {
+  .nav-link {
+    font-size: 14px; /** Зменшення розміру шрифту на менших екранах */
+  }
+}
+
+  
+  /*! Медіа-запит для точки переходу навігаційного меню на 1244px */
+@media (max-width: 1244px) {
+  .navbar-expand-lg .navbar-toggler {
+    display: block !important;
+    order:4 /** Зміщення кнопки бургера вправо */
+  }
+  
+  .navbar > .container, .navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: start; /** Зміщення кнопки бургера вгору до точки переходу 991px */
+    justify-content: space-between;
+}
+
+  .navbar-expand-lg .navbar-collapse {
+    display: none !important;
+    order: 1; /** Розташування меню перед кнопкою бургера */
+  }
+  .navbar-expand-lg .navbar-collapse.show {
+    display: block !important;
+  }
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column!important;
+  }
+  .navbar-expand-lg .navbar-nav .nav-item {
+    width: 100%;
+    text-align: left !important;
+  }
+}
+
+  /*! Медіа-запит для точки переходу навігаційного меню на 991px*/
+@media (max-width: 991px) {
+  .navbar-expand-lg .navbar-toggler {
+    order:1 /** Зміщення кнопки бургера вправо, точка переходу 991px */
+  }
+}
+
+/*! Медіа-запити для різних розширень */
+@media (max-width: 1200px) {
+  #pdf-container {
+      padding-bottom: 66.67%; /* Співвідношення 3:2 */
+  }
+}
+
+@media (max-width: 992px) {
+  #pdf-container {
+      padding-bottom: 56.25%; /* Співвідношення 16:9 */
+  }
+}
+
+@media (max-width: 768px) {
+  #pdf-container {
+      padding-bottom: 75%; /* Повертаємось до 4:3 */
+  }
+}
+
+@media (max-width: 576px) {
+  #pdf-container {
+      padding-bottom: 100%; /* Співвідношення 1:1 для мобільних пристроїв */
+  }
+}
+
+/*! Медіа-запит для точок переходу відображення PDF на сторінці */
+@media (max-width: 3440px) {
+  embed {
+    width: 80%;
+    height: 770px;
+    }
+  }
+
+@media (max-width: 2440px) {
+  embed {
+    width: 80%;
+    height: 600px;
+    }
+  }
+
+@media (max-width: 1920px) {
+  embed {
+    width: 90%;
+    height: 670px;
+    }
+  }
+
+@media (max-width: 1080px) {
+  embed {
+  width: 98%;
+  height: 1500px;
+  }
+}
+
+@media (max-width: 1024px) { /*? Стилі для відображення PDF на сторінці під моноблок*/
+  embed {
+    width: 98%;
+    height: 380px;
+    }
+  }
+
+
+/*                                                                                                                                                                                                                                                                
+███████╗ █████╗ ███████╗██╗  ██╗ █████╗     ███████╗██╗███╗   ███╗██╗███╗   ██╗
+██╔════╝██╔══██╗██╔════╝██║  ██║██╔══██╗    ╚══███╔╝██║████╗ ████║██║████╗  ██║
+███████╗███████║███████╗███████║███████║      ███╔╝ ██║██╔████╔██║██║██╔██╗ ██║
+╚════██║██╔══██║╚════██║██╔══██║██╔══██║     ███╔╝  ██║██║╚██╔╝██║██║██║╚██╗██║
+███████║██║  ██║███████║██║  ██║██║  ██║    ███████╗██║██║ ╚═╝ ██║██║██║ ╚████║
+╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚══════╝╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝
+                                                                               
+███████╗██╗███╗   ███╗██╗███╗   ██╗   ██████╗ ███████╗██╗   ██╗                
+╚══███╔╝██║████╗ ████║██║████╗  ██║   ██╔══██╗██╔════╝██║   ██║                
+  ███╔╝ ██║██╔████╔██║██║██╔██╗ ██║   ██║  ██║█████╗  ██║   ██║                
+ ███╔╝  ██║██║╚██╔╝██║██║██║╚██╗██║   ██║  ██║██╔══╝  ╚██╗ ██╔╝                
+███████╗██║██║ ╚═╝ ██║██║██║ ╚████║██╗██████╔╝███████╗ ╚████╔╝                 
+╚══════╝╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝╚═════╝ ╚══════╝  ╚═══╝  
+*/

@@ -1,0 +1,231 @@
+/*Занулення CSS стилів браузера | Overriding browser CSS styles*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*----------------------------------------------------*/
+
+/*Стилі для тіла сайту | CSS body*/
+body {
+    margin: 0;
+    overflow-x: hidden; /* Відключення горизонтальної прокрутки */
+    overflow-y: hidden; /* Відключення вертикальної прокрутки */
+    }
+    
+/*Ефект матриці на сторінці| Matrix efect*/
+    canvas {
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+    }
+    
+/*Керуємо стилями CSS заголовків h1-h6 | We control the CSS styles of the h1-h6 headers*/
+h1 {
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1BFD9C;
+        margin: 60px;
+    }
+    
+h2 {
+        font-size: 21px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #10c275;
+        margin: 40px;
+    }
+    
+h3 {
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #10c275;
+      margin: 40px;
+  }
+  
+p {
+      font-size: 16px;
+      font-family: 'Courier New', monospace;
+      color: #10c275; 
+      margin: 0;
+      line-height: 1.6;
+  }
+
+/*Стль кнопки на сторінці*/
+button {
+        --green: #1BFD9C;
+        font-size: 15px;
+        padding: 0.7em 2.7em;
+        letter-spacing: 0.06em;
+        position: relative;
+        font-family: inherit;
+        border-radius: 0.6em;
+        overflow: hidden;
+        transition: all 0.3s;
+        line-height: 1.4em;
+        border: 2px solid var(--green);
+        background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+        color: var(--green);
+        box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+        margin-right: 20px;
+      }
+      
+    button:hover {
+        color: #82ffc9;
+        box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+      }
+      
+    button:before {
+        content: "";
+        position: absolute;
+        left: -4em;
+        width: 4em;
+        height: 100%;
+        top: 0;
+        transition: transform .4s ease-in-out;
+        background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+      }
+      
+    button:hover:before {
+        transform: translateX(15em);
+      }
+      
+/*Колір для веб посилань, а також колір тексту в кнопці | The color for web links, as well as the color of the text in the button*/
+a {
+    color: #1BFD9C
+    }
+  
+    footer {
+      background-color: rgba(255, 255, 255, 0);
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+  }
+/*Стилі CSS для додаткових класів | CSS styles for additional classes*/
+/*Основний блок інформації на сторінці, містить в собі текст та кнопки, розміщений вище ефекту matrix | The main block of information on the page, containing text and buttons, is placed above the matrix effect*/
+.block_info {
+  background-color: rgba(255, 255, 255, 0);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: block;
+  position: absolute;
+  z-index: 999;
+}
+
+/*Поведінка, колір та шрифт загаловку h1 для тексту "DeskTools | Λάμδα" | Behavior, color and font of the h1 header for the text "DeskTools | Λάμδα"*/
+  .desktools_info_h1 {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1BFD9C;
+    margin: 20px;
+    text-shadow: 0 0 5px rgb(90, 90, 90),
+                    0 0 25px #1BFD9C,
+                        0 0 50px #1BFD9C,
+                            0 0 100px #1BFD9C;
+  }
+
+/*Стиль для тексту з ефектом "коду" | code style for text*/
+  .code-style {
+    position: relative;
+    font-family: 'Courier New', monospace;
+    color: #10c275; /* Зелений колір */
+    line-height: 1.4;
+    margin: 22px 0 12px 0;
+   }
+  
+/*Блок с фото, аватаром | CSS for foto*/
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      filter: grayscale(100%);
+      margin: 30px 0 20px 0;
+  }
+
+    .avatar:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      filter: grayscale(0%);
+  }
+
+            @keyframes pulse {
+              0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+              }
+              50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+              }
+              100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+              }
+    }
+
+    .avatar.pulse {
+      animation: pulse 12s infinite;
+    }
+    
+/*Блок з кнопками | CSS for botton block*/
+    .botton_block {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 00 0;
+    padding: 30px 0 0 20px;
+    }
+    
+
+/*                                                                                                                                                                                                                                                                   
+███████╗ █████╗ ███████╗██╗  ██╗ █████╗     ███████╗██╗███╗   ███╗██╗███╗   ██╗
+██╔════╝██╔══██╗██╔════╝██║  ██║██╔══██╗    ╚══███╔╝██║████╗ ████║██║████╗  ██║
+███████╗███████║███████╗███████║███████║      ███╔╝ ██║██╔████╔██║██║██╔██╗ ██║
+╚════██║██╔══██║╚════██║██╔══██║██╔══██║     ███╔╝  ██║██║╚██╔╝██║██║██║╚██╗██║
+███████║██║  ██║███████║██║  ██║██║  ██║    ███████╗██║██║ ╚═╝ ██║██║██║ ╚████║
+╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚══════╝╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝
+                                                                               
+███████╗██╗███╗   ███╗██╗███╗   ██╗   ██████╗ ███████╗██╗   ██╗                
+╚══███╔╝██║████╗ ████║██║████╗  ██║   ██╔══██╗██╔════╝██║   ██║                
+  ███╔╝ ██║██╔████╔██║██║██╔██╗ ██║   ██║  ██║█████╗  ██║   ██║                
+ ███╔╝  ██║██║╚██╔╝██║██║██║╚██╗██║   ██║  ██║██╔══╝  ╚██╗ ██╔╝                
+███████╗██║██║ ╚═╝ ██║██║██║ ╚████║██╗██████╔╝███████╗ ╚████╔╝                 
+╚══════╝╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝╚═════╝ ╚══════╝  ╚═══╝      
+*/
+
+
+
