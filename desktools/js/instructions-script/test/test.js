@@ -1,5 +1,5 @@
 const catalogs = {
-    catalog1: '/source/pdf/instructions-sebn-pdf/instructions-source/GOLF-A8', // Шлях до каталогу 1
+    catalog1: 'http://127.0.0.1:5500/pdf/test/', // Шлях до каталогу 1
     catalog2: '/source/pdf/instructions-sebn-pdf/instructions-source/AUX-TOOLS' // Шлях до каталогу 2
 };
 
@@ -9,8 +9,8 @@ function searchPDF(catalogKey) {
     const input2 = document.getElementById('field2').value.trim();
     const input3 = document.getElementById('field3').value.trim();
 
-    // Об'єднуємо текст у один рядок
-    const combinedText = (input1 + " " + input2 + " " + input3).trim();
+    // Об'єднуємо текст без пробілів
+    const combinedText = input1 + input2 + input3;
     const pdfContainer = document.getElementById('pdf-container');
 
     if (!combinedText) {
