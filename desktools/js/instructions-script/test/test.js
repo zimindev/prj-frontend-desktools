@@ -44,3 +44,25 @@ function searchPDF(catalogKey) {
             alert("Файл не знайдено.");
         });
 }
+
+// Додаємо функціонал перемикання між полями та кнопкою
+document.getElementById('field1').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); // Запобігаємо стандартній дії
+        document.getElementById('field2').focus(); // Перемикаємо фокус на друге поле
+    }
+});
+
+document.getElementById('field2').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); // Запобігаємо стандартній дії
+        document.getElementById('field3').focus(); // Перемикаємо фокус на третє поле
+    }
+});
+
+document.getElementById('field3').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); // Запобігаємо стандартній дії
+        document.querySelector('.button-search-form').focus(); // Перемикаємо фокус на кнопку пошуку
+    }
+});
