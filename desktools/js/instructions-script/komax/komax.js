@@ -1,5 +1,5 @@
 const catalogs = {
-    catalog1: 'http://127.0.0.1:5500/pdf/test/', // Шлях до каталогу 1
+    catalog1: '/source/pdf/instructions-sebn-pdf/instructions-source/PRE-PROD-KOMAX', // Шлях до каталогу 1
     catalog2: '/source/pdf/instructions-sebn-pdf/instructions-source/AUX-TOOLS' // Шлях до каталогу 2
 };
 
